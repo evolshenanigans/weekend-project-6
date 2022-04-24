@@ -1,0 +1,1 @@
+web: gunicorn initiald_inventory:app -- preload

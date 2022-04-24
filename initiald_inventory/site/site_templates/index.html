@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- flash message -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true)  %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss = "alert" onclick="this.parentElement.style.display='none'">&times;</button>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<!-- Header section -->
+<div class="container">
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>PROJECT: INITIAL D</h2>
+            <h5>API for Inital D anime</h5>
+            <div>
+                <button class="btn btn-primary">View our docs</button>
+                <button class="btn btn-primary">Join our Slack</button>
+            </div>
+        </div>
+        <!-- header image -->
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/155897.svg" alt="hero header image" class="header-image">
+        </div>
+    </header>
+        <!-- end of header section -->
+        <!-- start of middle -->
+        <section class="row">
+            <div class="col-12" id="middle-text">
+                <h2>Peek our collection</h2>
+                <p>you can harness the power of an API to expand your collection</p>
+            </div>
+        </section>
+      <!-- end of middle -->
+      <!-- collection of features section -->
+      <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/apiblack.png" alt="API Image" id="api-image">
+            <h4>Dedicated API ROUTES</h4>
+            <P>
+                FAN OF API ROUTES? WE HAVE THOSE FOR YOU.
+            </P>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/graphqlblack.png" alt="" id="graphql-image">
+            <h4>GraphQL API Route</h4>
+            <p>
+                if you want all data from one endpoint... we got dat.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/dbblack.png" alt="database" id="database-image">
+            <h4>PostgreSQL Database</h4>
+            <p>
+                ALL DATA WILL BE PERSISTED INSIDE OF A SECURE POSTGRES DATABASE
+            </p>
+        </div>
+      </section>
+      <!-- END OF COLLECTION OF FEATURES -->
+      <!-- START OF COMMUNITY SECTION -->
+      <section class="row">
+          <div class="col-12 col-md-6">
+              <img src="../../static/images/AE86T_Manga_Stage_1.webp" alt="" id="initiald-image">
+          </div>
+          <div class="col-12 col-md-6">
+              <h4>TALK WITH LIKE MINDED ANIME ENTHUSIASTS</h4>
+              <P>
+                  TALK WITH OTHER DEVS AROUND THE WORLD AND COLLAB ON PROJECTS
+                  WITH YOUR DATA. JOIN SLACK AND START ON GITHUB
+              </P>
+          
+            <button class="btn btn-primary">VIEW ON GITHUB</button>
+            <button class="btn btn-primary">JOIN OUR SLACK CHANNEL</button>
+          </div>
+        </section>
+    <!-- end community section -->
+    <!-- footer -->
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <img src="../../static/images/projectdv2.jpg" alt="initiald logo" id="footer_logo">
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Plateform</h4>
+                <P>WHY?</P>
+                <p>PROJECT: INITIAL D</p>
+                <P>DONATE</P>
+                <P>SPREAD THE WORD</P>
+                <P>MY PROCESS</P>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Plateform</h4>
+                <P>WHY?</P>
+                <p>PROJECT: INITIAL D</p>
+                <P>DONATE</P>
+                <P>SPREAD THE WORD</P>
+                <P>MY PROCESS</P>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Plateform</h4>
+                <P>WHY?</P>
+                <p>PROJECT: INITIAL D</p>
+                <P>DONATE</P>
+                <P>SPREAD THE WORD</P>
+                <P>MY PROCESS</P>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Plateform</h4>
+                <P>WHY?</P>
+                <p>PROJECT: INITIAL D</p>
+                <P>DONATE</P>
+                <P>SPREAD THE WORD</P>
+                <P>MY PROCESS</P>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Plateform</h4>
+                <P>WHY?</P>
+                <p>PROJECT: INITIAL D</p>
+                <P>DONATE</P>
+                <P>SPREAD THE WORD</P>
+                <P>MY PROCESS</P>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+{% endblock content %}
